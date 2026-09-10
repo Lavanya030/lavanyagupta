@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Research and cartography portfolio of Lavanya Gupta: cultural economies of the Kumaon Himalayas, editorial leadership, academic CV, conference footprint, BhuPath, and GIS mapping work.">
+<meta name="description" content="Research and cartography portfolio of Lavanya Gupta: cultural economies of the Kumaon Himalayas, editorial leadership, academic CV, and GIS mapping work.">
 <title>Lavanya Gupta</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,20 +91,29 @@
     background:var(--paper);
     border-bottom:1px solid var(--line);
   }
-  .sitenav a{
+  .sitenav a, .sitenav button.page-btn{
     font-family:"IBM Plex Mono", monospace;
     font-size:11px; letter-spacing:.07em; text-transform:uppercase;
     color:var(--ink-soft); text-decoration:none;
     padding:13px 12px;
     border-bottom:2px solid transparent;
     white-space:nowrap;
+    background:none; border-left:none; border-right:none; border-top:none;
+    cursor:pointer;
   }
-  .sitenav a:hover{color:var(--pine);}
-  .sitenav a.current{color:var(--pine); border-bottom-color:var(--pine);}
+  .sitenav a:hover, .sitenav button.page-btn:hover{color:var(--pine);}
+  .sitenav a.current, .sitenav button.page-btn.current{color:var(--pine); border-bottom-color:var(--pine);}
   [id]{scroll-margin-top:60px;}
 
+  /* ---------- persistent masthead ---------- */
+  .masthead{padding:28px 0 4px;}
+  .masthead .hero-tags{margin-top:16px;}
+
+  /* ---------- page panels (top-level tabs) ---------- */
+  .page-panel[hidden]{display:none;}
+
   /* ---------- hero ---------- */
-  .hero{padding:76px 0 56px;}
+  .hero{padding:56px 0 56px;}
   .hero-kicker{
     font-family:"IBM Plex Mono", monospace;
     font-size:12px; letter-spacing:.12em; text-transform:uppercase;
@@ -210,47 +219,8 @@
   .cv-simple-list .yr{font-family:"IBM Plex Mono", monospace; font-size:11px; color:var(--pine-soft); margin-right:8px;}
   .cv-note{font-size:.85rem; color:var(--ink-soft); margin-top:18px; line-height:1.55; max-width:70ch;}
 
-  /* ---------- conference map ---------- */
-  .confmap{padding-top:56px; border-top:1px solid var(--line);}
-  .confmap-head h2{font-size:2rem;}
-  .confmap-intro{max-width:62ch; color:var(--ink-soft); font-size:1rem; line-height:1.6; margin-top:14px;}
-  .confmap-fig{
-    margin-top:32px; background:var(--paper-raised); border:1px solid var(--line); border-radius:6px;
-    padding:12px; box-shadow:var(--shadow);
-  }
-  .confmap-fig svg{width:100%; height:auto; display:block;}
-  .confmap-legend{
-    display:flex; flex-wrap:wrap; gap:22px; margin-top:18px;
-    font-family:"IBM Plex Mono", monospace; font-size:11px; color:var(--ink-soft);
-  }
-  .confmap-legend span{display:inline-flex; align-items:center; gap:7px;}
-  .leg-swatch{width:11px; height:11px; border-radius:50%; display:inline-block; flex-shrink:0;}
-  .leg-swatch.presented{background:var(--pine);}
-  .leg-swatch.attended{background:var(--paper-raised); border:1.6px solid var(--pine);}
-  .leg-swatch.invited{background:var(--ochre-fill); border-radius:2px; transform:rotate(45deg);}
-  .leg-swatch.forthcoming{background:var(--paper-raised); border:1.6px dashed var(--ochre-fill);}
-  .leg-swatch.home{background:var(--ochre-fill); clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
-
-  .footprint-table{width:100%; border-collapse:collapse; margin-top:28px; font-size:.92rem;}
-  .footprint-table th{
-    text-align:left; font-family:"IBM Plex Mono", monospace; font-size:10.5px; letter-spacing:.05em;
-    text-transform:uppercase; color:var(--ink-soft); font-weight:500;
-    padding:0 16px 10px 0; border-bottom:1px solid var(--line);
-  }
-  .footprint-table td{
-    padding:12px 16px 12px 0; border-bottom:1px solid var(--line);
-    color:var(--ink); vertical-align:top; line-height:1.45;
-  }
-  .footprint-table tr:last-child td{border-bottom:none;}
-  .footprint-table .ft-venue{display:block; color:var(--ink-soft); font-size:.85rem; margin-top:2px;}
-  .footprint-table .ft-role{
-    font-family:"IBM Plex Mono", monospace; font-size:10.5px; letter-spacing:.03em;
-    text-transform:uppercase; color:var(--ink-soft); white-space:nowrap;
-  }
-  .footprint-table .ft-role.forthcoming{color:var(--ochre-text);}
-
   /* ---------- cv & editorial tabs ---------- */
-  .tabs-wrap{padding-top:56px; border-top:1px solid var(--line);}
+  .tabs-wrap{padding-top:8px;}
   .tab-buttons{display:flex; gap:0; margin-bottom:8px;}
   .tab-btn{
     font-family:"IBM Plex Mono", monospace;
@@ -289,7 +259,7 @@
   .cfp-list .cfp-ongoing{color:var(--ochre-text); font-family:"IBM Plex Mono", monospace; font-size:10px; text-transform:uppercase; letter-spacing:.04em;}
 
   /* ---------- project spotlight ---------- */
-  .project{padding-top:56px; border-top:1px solid var(--line);}
+  .project{padding-top:8px;}
   .project-head{display:flex; justify-content:space-between; align-items:baseline; gap:20px; flex-wrap:wrap;}
   .project-head h2{font-size:2rem;}
   .project-status{
@@ -304,7 +274,7 @@
 
   /* ---------- gallery ---------- */
   .gallery-head{
-    padding-top:56px; border-top:1px solid var(--line);
+    padding-top:8px;
     display:flex; justify-content:space-between; align-items:baseline; gap:20px; flex-wrap:wrap;
   }
   .gallery-head h2{font-size:2rem;}
@@ -376,7 +346,330 @@
 </style>
 </head>
 <body>
+<title>Lavanya Gupta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,380;0,9..144,500;0,9..144,600;1,9..144,450&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#eff1ec;
+    --paper-raised:#fbfaf6;
+    --ink:#1e2a24;
+    --ink-soft:#4b5850;
+    --line:#d7dbd1;
+    --pine:#28584a;
+    --pine-soft:#3f6f5f;
+    --ochre-fill:#c8933f;
+    --ochre-text:#8a5c1c;
+    --shadow: 0 1px 0 rgba(30,42,36,0.04);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#12160f;
+      --paper-raised:#181d15;
+      --ink:#e8ebe2;
+      --ink-soft:#a9b3a5;
+      --line:#2b332a;
+      --pine:#7bc4a5;
+      --pine-soft:#5b9d84;
+      --ochre-fill:#7a5322;
+      --ochre-text:#e6b568;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#12160f;
+    --paper-raised:#181d15;
+    --ink:#e8ebe2;
+    --ink-soft:#a9b3a5;
+    --line:#2b332a;
+    --pine:#7bc4a5;
+    --pine-soft:#5b9d84;
+    --ochre-fill:#7a5322;
+    --ochre-text:#e6b568;
+    color-scheme: dark;
+  }
 
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:"Fraunces", Georgia, "Times New Roman", serif;
+    font-weight:500;
+    text-wrap:balance;
+    margin:0;
+  }
+  .mono{
+    font-family:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  a{color:var(--pine-soft);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--pine); outline-offset:3px;}
+
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+
+  /* ---------- header / graticule bar ---------- */
+  .graticule{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:16px 32px;
+    border-bottom:1px solid var(--line);
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    letter-spacing:.06em;
+    color:var(--ink-soft);
+  }
+  .graticule span:first-child{color:var(--ink);}
+
+  /* ---------- site nav ---------- */
+  .sitenav{
+    position:sticky; top:0; z-index:20;
+    display:flex; gap:6px; flex-wrap:wrap;
+    padding:0 32px;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .sitenav a, .sitenav button.page-btn{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:14px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--ink-soft); text-decoration:none;
+    padding:12px 18px;
+    margin:8px 0;
+    border-radius:6px;
+    white-space:nowrap;
+    background:var(--paper-raised); border:1px solid var(--line);
+    cursor:pointer;
+  }
+  .sitenav a:hover, .sitenav button.page-btn:hover{color:var(--pine); border-color:var(--pine-soft); background:var(--paper);}
+  .sitenav a.current, .sitenav button.page-btn.current{color:#fff; background:var(--pine); border-color:var(--pine);}
+  [id]{scroll-margin-top:60px;}
+
+  /* ---------- persistent masthead ---------- */
+  .masthead{padding:28px 0 4px;}
+
+  /* ---------- page panels (top-level tabs) ---------- */
+  .page-panel[hidden]{display:none;}
+
+  /* ---------- hero ---------- */
+  .hero{padding:56px 0 56px;}
+  .hero-kicker{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--pine-soft); margin-bottom:18px; display:block;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 4.4rem);
+    line-height:1.02;
+    letter-spacing:-0.01em;
+  }
+  .hero h1 em{font-style:italic; font-weight:380; color:var(--pine);}
+  .hero-role{
+    font-size:1.18rem;
+    color:var(--ink-soft);
+    max-width:640px;
+    margin-top:22px;
+    line-height:1.5;
+  }
+  /* ---------- bio ---------- */
+  .bio{
+    display:grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap:64px;
+    padding:8px 0 72px;
+    border-top:1px solid var(--line);
+    padding-top:56px;
+  }
+  .bio p{font-size:1.05rem; line-height:1.68; color:var(--ink); max-width:60ch;}
+  .bio p + p{margin-top:16px;}
+  .bio-label{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:14px; display:block;
+  }
+  .facts dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px; font-size:.94rem;}
+  .facts dt{color:var(--ink-soft); white-space:nowrap;}
+  .facts dd{margin:0; color:var(--ink);}
+  .facts-block + .facts-block{margin-top:28px; padding-top:24px; border-top:1px solid var(--line);}
+  .roles{list-style:none; margin:0; padding:0; font-size:.94rem; line-height:1.55;}
+  .roles li{padding-left:14px; position:relative; margin-bottom:9px;}
+  .roles li::before{content:"·"; position:absolute; left:0; color:var(--pine-soft); font-weight:700;}
+
+  /* ---------- CV ---------- */
+  .cv{padding-top:56px; border-top:1px solid var(--line);}
+  .cv-head{display:flex; justify-content:space-between; align-items:baseline; gap:20px; flex-wrap:wrap;}
+  .cv-head h2{font-size:2rem;}
+  .cv-head .mono{font-size:12px; color:var(--ink-soft);}
+  .cv-intro{max-width:62ch; color:var(--ink-soft); font-size:1rem; line-height:1.6; margin-top:14px;}
+
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px;}
+  .chip{
+    font-family:"IBM Plex Mono", monospace; font-size:11px;
+    padding:5px 10px; border:1px solid var(--line); border-radius:3px;
+    color:var(--ink-soft); background:var(--paper-raised);
+  }
+
+  .cv-grid{display:grid; grid-template-columns:1fr 1fr; gap:0; margin-top:44px; border-top:1px solid var(--line);}
+  .cv-block{padding:28px 0; border-bottom:1px solid var(--line);}
+  .cv-block.span-2{grid-column:1 / -1;}
+  .cv-grid .cv-block:nth-child(odd):not(.span-2){padding-right:36px; border-right:1px solid var(--line);}
+  .cv-grid .cv-block:nth-child(even):not(.span-2){padding-left:36px;}
+  .cv-block h3{
+    font-family:"IBM Plex Mono", monospace; font-weight:600; font-size:11.5px;
+    letter-spacing:.09em; text-transform:uppercase; color:var(--pine);
+    margin-bottom:16px;
+  }
+  .cv-entry{margin-bottom:16px;}
+  .cv-entry:last-child{margin-bottom:0;}
+  .cv-entry-title{font-size:.98rem; font-weight:600; color:var(--ink); line-height:1.4;}
+  .cv-entry-title i{font-style:italic; font-weight:500;}
+  .cv-entry-meta{
+    font-family:"IBM Plex Mono", monospace; font-size:11px; color:var(--ink-soft);
+    margin-top:3px; line-height:1.5;
+  }
+  .cv-entry-meta .status{color:var(--ochre-text);}
+  .cv-entry ul.cv-sub{list-style:none; margin:8px 0 0; padding:0;}
+  .cv-entry ul.cv-sub li{
+    font-size:.9rem; color:var(--ink); line-height:1.55; padding-left:13px; position:relative; margin-bottom:5px;
+  }
+  .cv-entry ul.cv-sub li::before{content:"\2013"; position:absolute; left:0; color:var(--ink-soft);}
+  .cv-simple-list{list-style:none; margin:0; padding:0;}
+  .cv-simple-list li{
+    font-size:.92rem; line-height:1.6; padding:9px 0; border-top:1px solid var(--line); color:var(--ink);
+  }
+  .cv-simple-list li:first-child{border-top:none; padding-top:0;}
+  .cv-simple-list .yr{font-family:"IBM Plex Mono", monospace; font-size:11px; color:var(--pine-soft); margin-right:8px;}
+  .cv-note{font-size:.85rem; color:var(--ink-soft); margin-top:18px; line-height:1.55; max-width:70ch;}
+
+  /* ---------- cv & editorial tabs ---------- */
+  .tabs-wrap{padding-top:8px;}
+  .tab-buttons{display:flex; gap:0; margin-bottom:8px;}
+  .tab-btn{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--ink-soft); background:none; border:none; cursor:pointer;
+    padding:13px 4px; margin-right:30px;
+    border-bottom:2px solid transparent;
+  }
+  .tab-btn:hover{color:var(--pine);}
+  .tab-btn.active{color:var(--pine); border-bottom-color:var(--pine);}
+  .tabs-wrap .cv{border-top:none; padding-top:24px;}
+  .tab-panel[hidden]{display:none;}
+
+  /* ---------- editorial leadership ---------- */
+  .stats-row{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px;
+    overflow:hidden; margin:32px 0 8px;
+  }
+  .stat-tile{background:var(--paper-raised); padding:22px 20px;}
+  .stat-num{font-family:"Fraunces", serif; font-size:2.3rem; font-weight:500; color:var(--pine); line-height:1;}
+  .stat-label{font-size:.86rem; color:var(--ink); margin-top:9px; line-height:1.4;}
+  .stat-sub{font-family:"IBM Plex Mono", monospace; font-size:10px; color:var(--ink-soft); margin-top:5px; line-height:1.4;}
+  .skills-list{columns:2; column-gap:32px; list-style:none; margin:0; padding:0;}
+  .skills-list li{
+    font-size:.92rem; line-height:1.5; color:var(--ink); padding-left:14px; position:relative;
+    margin-bottom:10px; break-inside:avoid;
+  }
+  .skills-list li::before{content:"\2013"; position:absolute; left:0; color:var(--ink-soft);}
+  .cfp-list{list-style:none; margin:0; padding:0;}
+  .cfp-list li{
+    padding:12px 0; border-top:1px solid var(--line); font-size:.94rem; line-height:1.5; color:var(--ink);
+  }
+  .cfp-list li:first-child{border-top:none; padding-top:0;}
+  .cfp-list .cfp-venue{display:block; font-family:"IBM Plex Mono", monospace; font-size:10.5px; color:var(--ink-soft); margin-top:3px;}
+  .cfp-list .cfp-ongoing{color:var(--ochre-text); font-family:"IBM Plex Mono", monospace; font-size:10px; text-transform:uppercase; letter-spacing:.04em;}
+
+  /* ---------- project spotlight ---------- */
+  .project{padding-top:8px;}
+  .project-head{display:flex; justify-content:space-between; align-items:baseline; gap:20px; flex-wrap:wrap;}
+  .project-head h2{font-size:2rem;}
+  .project-status{
+    font-family:"IBM Plex Mono", monospace; font-size:11px; letter-spacing:.04em;
+    padding:5px 10px; border:1px solid var(--pine-soft); border-radius:3px; color:var(--pine);
+    white-space:nowrap;
+  }
+  .project-grid{display:grid; grid-template-columns:1.5fr 1fr; gap:64px; margin-top:28px;}
+  .project-grid p{font-size:1.02rem; line-height:1.68; color:var(--ink); max-width:60ch;}
+  .project-grid p + p{margin-top:16px;}
+  .project-facts .facts-block:first-child{margin-top:0; padding-top:0; border-top:none;}
+
+  /* ---------- gallery ---------- */
+  .gallery-head{
+    padding-top:8px;
+    display:flex; justify-content:space-between; align-items:baseline; gap:20px; flex-wrap:wrap;
+  }
+  .gallery-head h2{font-size:2rem;}
+  .gallery-head .count{font-family:"IBM Plex Mono", monospace; font-size:12px; color:var(--ink-soft);}
+  .gallery-intro{max-width:62ch; color:var(--ink-soft); font-size:1rem; line-height:1.6; margin-top:14px;}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(360px,1fr));
+    gap:28px;
+    padding:40px 0 80px;
+  }
+  .card{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    display:flex; flex-direction:column;
+    box-shadow:var(--shadow);
+  }
+  .card-fig{
+    background:#f4f4ef;
+    border-bottom:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    padding:14px;
+  }
+  :root[data-theme="dark"] .card-fig{background:#e9e9e4;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .card-fig{background:#e9e9e4;}}
+  .card-fig img{width:100%; height:auto; display:block; max-height:420px; object-fit:contain;}
+  .card-body{padding:22px 24px 26px; display:flex; flex-direction:column; gap:12px; flex:1;}
+  .card-top{display:flex; justify-content:space-between; align-items:center; gap:10px;}
+  .sheet-no{font-family:"IBM Plex Mono", monospace; font-size:11px; color:var(--ink-soft); letter-spacing:.04em;}
+  .kind{
+    font-family:"IBM Plex Mono", monospace; font-size:10.5px; letter-spacing:.07em; text-transform:uppercase;
+    padding:3px 8px; border-radius:3px; border:1px solid var(--line); color:var(--ink-soft);
+  }
+  .kind.research{color:var(--pine); border-color:var(--pine-soft);}
+  .kind.teaching{color:var(--ochre-text); border-color:var(--ochre-fill);}
+  .card h3{font-size:1.28rem; line-height:1.22;}
+  .card-meta{
+    font-family:"IBM Plex Mono", monospace; font-size:11px; color:var(--ink-soft); line-height:1.6;
+  }
+  .card-meta b{color:var(--ink); font-weight:600;}
+  .card p{font-size:.95rem; line-height:1.58; color:var(--ink); margin:0;}
+  .card-stat{
+    margin-top:2px; padding:10px 12px; background:var(--paper); border:1px solid var(--line); border-radius:4px;
+    font-size:.85rem; color:var(--pine); font-family:"IBM Plex Mono", monospace; line-height:1.5;
+  }
+  .card-link{font-size:.85rem; margin-top:-4px;}
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:1px solid var(--line);
+    padding:32px 0 48px;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+  }
+  footer .mono{font-size:11.5px; color:var(--ink-soft);}
+
+  @media (max-width:820px){
+    .bio{grid-template-columns:1fr; gap:40px;}
+    .wrap{padding:0 20px;}
+    .graticule{padding:14px 20px; flex-direction:column; align-items:flex-start; gap:4px;}
+    .cv-grid{grid-template-columns:1fr;}
+    .cv-grid .cv-block:nth-child(odd):not(.span-2){padding-right:0; border-right:none;}
+    .cv-grid .cv-block:nth-child(even):not(.span-2){padding-left:0;}
+    .project-grid{grid-template-columns:1fr; gap:32px;}
+    .skills-list{columns:1;}
+  }
+</style>
 
 <div class="graticule">
   <span>30°N, 80°E &middot; Kumaon Himalayas</span>
@@ -384,30 +677,27 @@
 </div>
 
 <nav class="sitenav">
-  <a href="#about">About</a>
-  <a href="#cvtabs">CV &amp; Editorial Service</a>
-  <a href="#conference">Conference Footprint</a>
-  <a href="#bhupath">BhuPath</a>
-  <a href="#maps">Mapping &amp; Cartography</a>
+  <button type="button" class="page-btn current" data-page="about">About</button>
+  <button type="button" class="page-btn" data-page="cvtabs">CV &amp; Editorial Service</button>
+  <button type="button" class="page-btn" data-page="bhupath">BhuPath</button>
+  <button type="button" class="page-btn" data-page="maps">Mapping &amp; Cartography</button>
 </nav>
 
 <div class="wrap">
-  <header class="hero">
+  <div class="masthead">
     <span class="hero-kicker">Lavanya Gupta &middot; Geographer</span>
+  </div>
+
+  <div class="page-panel" data-page="about">
+  <header class="hero">
     <h1>Cultural economies of the <em>Indian Himalaya</em></h1>
     <p class="hero-role">PhD candidate in Rural Development at the Tata Institute of Social Sciences, Tuljapur, working on cultural economies, mountain geographies, gender, and land and forest tenure in the Kumaon Himalayas, alongside a parallel practice in cartography and GIS.</p>
-    <div class="hero-tags">
-      <span class="tag accent">RSA Fellow 2026</span>
-      <span class="tag">UGC&#8209;NET JRF</span>
-      <span class="tag">TISS Tuljapur</span>
-      <span class="tag">QGIS &middot; Python &middot; GEE</span>
-    </div>
   </header>
 
   <section class="bio" id="about">
     <div>
       <span class="bio-label">About</span>
-      <p>Lavanya's doctoral research examines cultural entrepreneurship and rural regeneration in Munsiyari, a high-altitude town in Uttarakhand's Pithoragarh district on the India&ndash;China border. Her thesis, submitted for evaluation in 2026, draws on geographic and archival methods, combining GIS with historical census records and internet archives to work through questions of cultural landscape and rural definition in the Indian Himalayan context.</p>
+      <p>Lavanya's doctoral research examines cultural entrepreneurship and rural regeneration in Munsiyari, a high-altitude town in Uttarakhand's Pithoragarh district on the India&ndash;China border. Her thesis draws on geographic and archival methods, combining GIS with historical census records and internet archives to work through questions of cultural landscape and rural definition in the Indian Himalayan context.</p>
       <p>She holds a BA and MA in Geography from the University of Lucknow and an M.Phil from TISS Mumbai. Her undergraduate degree paired Geography with Ancient History, an early combination that still shapes her interest in deep-time cultural landscapes. She also designed and taught a QGIS course at the graduate level at TISS.</p>
       <p>Beyond the thesis, her cartographic work spans policy-facing thematic mapping, historical spatial narrative, and network analysis, produced for research, publication, and teaching. She serves as Blog Editor and a Co-opted Board Member of the Regional Studies Association, volunteers in building out RSA India's network and activities, and is confirmed eligible for the RSA Fellowship Research Grant Scheme (FeRSA).</p>
     </div>
@@ -422,17 +712,18 @@
         </dl>
       </div>
       <div class="facts-block">
-        <span class="bio-label">RSA roles</span>
+        <span class="bio-label">Focus</span>
         <ul class="roles">
-          <li>Fellow, Regional Studies Association (2026)</li>
-          <li>Blog Editor &amp; Co-opted Board Member, RSA</li>
-          <li>Volunteer, RSA India Network &amp; Activities</li>
-          <li>Eligible, FeRSA Research Grant Scheme</li>
+          <li>Cultural entrepreneurship &amp; rural regeneration, Munsiyari, Uttarakhand</li>
+          <li>Fieldwork: multi-sited</li>
+          <li>Method: GIS combined with archival and oral-history sources</li>
         </ul>
       </div>
     </div>
   </section>
+  </div>
 
+  <div class="page-panel" data-page="cvtabs" hidden>
   <div class="tabs-wrap" id="cvtabs">
     <nav class="tab-buttons" role="tablist" aria-label="Curriculum vitae and editorial service">
       <button type="button" class="tab-btn active" data-tab="cv" role="tab" aria-selected="true">Academic CV</button>
@@ -444,7 +735,17 @@
       <h2>Editorial leadership</h2>
       <span class="mono">Publishing &amp; editorial service</span>
     </div>
-    <p class="cv-intro">Editorial and publishing experience across international academic platforms, from submission screening and reviewer coordination through to production handover, built toward managing editor, associate managing editor, and publishing editor roles.</p>
+    <p class="cv-intro">Editorial and publishing experience across international academic platforms, from submission screening and reviewer coordination through to production handover.</p>
+
+    <div class="facts-block" style="margin-top:24px; max-width:420px;">
+      <span class="bio-label">RSA roles</span>
+      <ul class="roles">
+        <li>Fellow, Regional Studies Association (2026)</li>
+        <li>Blog Editor &amp; Co-opted Board Member, RSA</li>
+        <li>Volunteer, RSA India Network &amp; Activities</li>
+        <li>Eligible, FeRSA Research Grant Scheme</li>
+      </ul>
+    </div>
 
     <div class="stats-row">
       <div class="stat-tile">
@@ -469,14 +770,10 @@
       <div class="cv-block span-2">
         <h3>Core peer review &amp; editorial skills</h3>
         <ul class="skills-list">
-          <li>Manuscript screening &amp; submission checks (file completeness, metadata accuracy, contributor details, permissions)</li>
           <li>Reviewer identification, invitation, reminders &amp; deadline follow-ups</li>
           <li>Coordinating editor decisions, managing revision cycles, ensuring clarity in communication</li>
           <li>Troubleshooting contributor issues related to submissions, formatting and platform navigation</li>
           <li>Ensuring completeness &amp; readiness of accepted manuscripts for production handover</li>
-          <li>Task tracker management (Excel), version control, reporting logs &amp; workflow documentation</li>
-          <li>Supporting Calls for Papers, special-series pipelines &amp; template maintenance</li>
-          <li>Professional handling of author, reviewer and editorial board queries</li>
           <li>Cross-team communication across the UK, the US, Africa, Nepal and India</li>
         </ul>
       </div>
@@ -507,10 +804,11 @@
           </ul>
         </div>
         <div class="cv-entry">
-          <div class="cv-entry-title">Special Editorial Calls, RSA &amp; AAG</div>
-          <div class="cv-entry-meta">2024&ndash;Present</div>
+          <div class="cv-entry-title">Volunteer, EdgeNet</div>
+          <div class="cv-entry-meta">2026&ndash;Present</div>
           <ul class="cv-sub">
-            <li>Develops and manages themed Calls for Papers; coordinates feedback cycles; ensures publication-ready outputs</li>
+            <li>Co-manages EdgeNet's LinkedIn and social media presence</li>
+            <li>Launching EdgeNet Spotlight: Spotlighting Edgy Scholars, an open space to share and celebrate the work of researchers and practitioners engaging with peripheries across the world</li>
           </ul>
         </div>
       </div>
@@ -723,7 +1021,7 @@
         </div>
         <div class="cv-entry">
           <div class="cv-entry-title" style="font-weight:600; font-size:.85rem; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-soft); margin-bottom:6px;">Technical skills</div>
-          <div class="cv-entry-meta" style="font-size:.92rem; line-height:1.6;">QGIS, ArcGIS &middot; Atlas.ti, Dedoose &middot; Zotero, Mendeley &middot; WordPress, Substack &middot; Canva, HTML</div>
+          <div class="cv-entry-meta" style="font-size:.92rem; line-height:1.6;">QGIS, ArcGIS, Python, Google Earth Engine (GEE) &middot; Atlas.ti, Dedoose &middot; Zotero, Mendeley &middot; WordPress, Substack &middot; Canva, HTML</div>
         </div>
       </div>
 
@@ -731,151 +1029,9 @@
   </section>
 
   </div>
+  </div>
 
-  <section class="confmap" id="conference">
-    <div class="confmap-head">
-      <h2>Conference footprint</h2>
-    </div>
-    <p class="confmap-intro">Conferences, invited lectures and presentations that have taken her research and cartography from TISS Tuljapur onto international platforms. Talks without a confirmed venue city are listed under Conference Presentations; marker positions on the map below are approximate, drawn from her travel record rather than a survey.</p>
-
-    <table class="footprint-table">
-      <thead>
-        <tr><th>Year</th><th>Event &amp; venue</th><th>Role</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2026</td>
-          <td>NMS 2026, &ldquo;(De)Coding Memory, Canon, and Heritage&rdquo;<span class="ft-venue">IIT Madras, Chennai, India</span></td>
-          <td><span class="ft-role forthcoming">Forthcoming</span></td>
-        </tr>
-        <tr>
-          <td>2025</td>
-          <td>From Blogs to Papers: Ethical and Engaged Writing<span class="ft-venue">Manipal University Jaipur, India</span></td>
-          <td><span class="ft-role">Invited lecture</span></td>
-        </tr>
-        <tr>
-          <td>2025</td>
-          <td>EdgeNet Workshop and Field Discussions<span class="ft-venue">Umea University, Sweden</span></td>
-          <td><span class="ft-role">Presented</span></td>
-        </tr>
-        <tr>
-          <td>2024</td>
-          <td>International Geographical Congress<span class="ft-venue">Dublin, Ireland</span></td>
-          <td><span class="ft-role">Presented</span></td>
-        </tr>
-        <tr>
-          <td>2023</td>
-          <td>29th HGRG Annual Conference<span class="ft-venue">University of Nottingham, UK (hybrid)</span></td>
-          <td><span class="ft-role">Attended</span></td>
-        </tr>
-        <tr>
-          <td>2023</td>
-          <td>Fourth Spatial Data Science Symposium<span class="ft-venue">UC Santa Barbara, USA (online)</span></td>
-          <td><span class="ft-role">Attended</span></td>
-        </tr>
-        <tr>
-          <td>2023</td>
-          <td>AAG Annual Meeting<span class="ft-venue">Denver, USA</span></td>
-          <td><span class="ft-role">Presented</span></td>
-        </tr>
-        <tr>
-          <td>2022</td>
-          <td>Feminist Geography Conference, &ldquo;Pushing Boundaries&rdquo;<span class="ft-venue">University of Colorado Boulder, USA</span></td>
-          <td><span class="ft-role">Presented</span></td>
-        </tr>
-        <tr>
-          <td>2021</td>
-          <td>Monash Symposium<span class="ft-venue">Melbourne, Australia</span></td>
-          <td><span class="ft-role">Presented</span></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="confmap-fig">
-<svg viewBox="0 0 1074 460" role="img" aria-labelledby="confmap-title" xmlns="http://www.w3.org/2000/svg">
-<title id="confmap-title">Map of conference, presentation and lecture venues relative to TISS Tuljapur</title>
-<rect x="0" y="0" width="1074" height="460" fill="var(--paper-raised)"/>
-<line x1="50.0" y1="24.0" x2="50.0" y2="424.0" stroke="var(--line)" stroke-width="1"/>
-<line x1="150.0" y1="24.0" x2="150.0" y2="424.0" stroke="var(--line)" stroke-width="1"/>
-<line x1="250.0" y1="24.0" x2="250.0" y2="424.0" stroke="var(--line)" stroke-width="1"/>
-<line x1="350.0" y1="24.0" x2="350.0" y2="424.0" stroke="var(--line)" stroke-width="1"/>
-<line x1="450.0" y1="24.0" x2="450.0" y2="424.0" stroke="var(--line)" stroke-width="1"/>
-<line x1="550.0" y1="24.0" x2="550.0" y2="424.0" stroke="var(--line)" stroke-width="1"/>
-<line x1="650.0" y1="24.0" x2="650.0" y2="424.0" stroke="var(--line)" stroke-width="1"/>
-<line x1="750.0" y1="24.0" x2="750.0" y2="424.0" stroke="var(--line)" stroke-width="1"/>
-<line x1="850.0" y1="24.0" x2="850.0" y2="424.0" stroke="var(--line)" stroke-width="1"/>
-<line x1="950.0" y1="24.0" x2="950.0" y2="424.0" stroke="var(--line)" stroke-width="1"/>
-<line x1="1050.0" y1="24.0" x2="1050.0" y2="424.0" stroke="var(--line)" stroke-width="1"/>
-<line x1="50.0" y1="357.3" x2="1050.0" y2="357.3" stroke="var(--line)" stroke-width="1"/>
-<line x1="50.0" y1="257.3" x2="1050.0" y2="257.3" stroke="var(--line)" stroke-width="1"/>
-<line x1="50.0" y1="157.3" x2="1050.0" y2="157.3" stroke="var(--line)" stroke-width="1"/>
-<line x1="50.0" y1="57.3" x2="1050.0" y2="57.3" stroke="var(--line)" stroke-width="1"/>
-<rect x="50.0" y="24.0" width="1000.0" height="400.0" fill="none" stroke="var(--ink-soft)" stroke-width="1.2"/>
-<text x="50.0" y="442.0" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">150&deg;W</text>
-<text x="150.0" y="442.0" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">120&deg;W</text>
-<text x="250.0" y="442.0" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">90&deg;W</text>
-<text x="350.0" y="442.0" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">60&deg;W</text>
-<text x="450.0" y="442.0" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">30&deg;W</text>
-<text x="550.0" y="442.0" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">0&deg;</text>
-<text x="650.0" y="442.0" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">30&deg;E</text>
-<text x="750.0" y="442.0" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">60&deg;E</text>
-<text x="850.0" y="442.0" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">90&deg;E</text>
-<text x="950.0" y="442.0" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">120&deg;E</text>
-<text x="1050.0" y="442.0" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">150&deg;E</text>
-<text x="40.0" y="360.3" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="end">30&deg;S</text>
-<text x="40.0" y="260.3" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="end">0&deg;</text>
-<text x="40.0" y="160.3" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="end">30&deg;N</text>
-<text x="40.0" y="60.3" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="end">60&deg;N</text>
-<path d="M 803.7 197.3 Q 810.5 202.7 817.3 214.0" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
-<path d="M 803.7 197.3 Q 806.0 182.0 802.6 167.6" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
-<path d="M 803.7 197.3 Q 710.7 83.9 617.7 44.7" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
-<path d="M 803.7 197.3 Q 666.4 88.8 529.1 79.5" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
-<path d="M 803.7 197.3 Q 674.9 92.3 546.2 80.8" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
-<path d="M 803.7 197.3 Q 477.1 62.9 150.5 142.6" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
-<path d="M 803.7 197.3 Q 501.6 60.7 199.6 124.4" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
-<path d="M 803.7 197.3 Q 918.7 244.8 1033.7 383.7" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
-<polygon points="803.7,188.3 805.9,194.3 812.2,194.6 807.3,198.5 809.0,204.6 803.7,201.1 798.4,204.6 800.1,198.5 795.1,194.6 801.4,194.3" fill="var(--ochre-fill)" stroke="var(--paper-raised)" stroke-width="1"/>
-<text x="789.7" y="195.3" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="end">TISS Tuljapur</text>
-<text x="789.7" y="208.3" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="var(--ink-soft)" text-anchor="end">home institution</text>
-<circle cx="817.3" cy="214.0" r="6" fill="var(--paper-raised)" stroke="var(--ochre-fill)" stroke-width="1.6" stroke-dasharray="3,2"/>
-<text x="830.3" y="232.0" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="start">Chennai, India</text>
-<text x="830.3" y="245.0" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">IIT Madras / NMS 2026</text>
-<text x="830.3" y="258.0" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">Oct 2026 (forthcoming)</text>
-<polygon points="802.6,161.6 808.6,167.6 802.6,173.6 796.6,167.6" fill="var(--ochre-fill)" />
-<text x="815.6" y="185.6" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="start">Jaipur, India</text>
-<text x="815.6" y="198.6" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">Manipal University Jaipur</text>
-<text x="815.6" y="211.6" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">Invited lecture / 2025</text>
-<circle cx="617.7" cy="44.7" r="6" fill="var(--pine)" />
-<text x="626.7" y="48.7" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="start">Umea, Sweden</text>
-<text x="626.7" y="61.7" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">EdgeNet Workshop / Jun 2025</text>
-<circle cx="529.1" cy="79.5" r="6" fill="var(--pine)" />
-<text x="520.1" y="71.5" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="end">Dublin, Ireland</text>
-<text x="520.1" y="84.5" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="end">Intl. Geographical Congress / Aug 2024</text>
-<circle cx="546.2" cy="80.8" r="6" fill="var(--paper-raised)" stroke="var(--pine)" stroke-width="1.6"/>
-<text x="555.2" y="98.8" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="start">Nottingham, UK</text>
-<text x="555.2" y="111.8" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">HGRG conf. (hybrid) / Nov 2023</text>
-<circle cx="150.5" cy="142.6" r="6" fill="var(--paper-raised)" stroke="var(--pine)" stroke-width="1.6"/>
-<text x="150.5" y="162.6" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="middle">Santa Barbara, USA</text>
-<text x="150.5" y="175.6" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="middle">SDSS symposium (online) / Sep 2023</text>
-<circle cx="199.6" cy="124.4" r="6" fill="var(--pine)" />
-<text x="208.6" y="128.4" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="start">Denver &amp; Boulder, USA</text>
-<text x="208.6" y="141.4" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">AAG Annual Mtg, Denver / 2023</text>
-<text x="208.6" y="154.4" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">Feminist Geog. Conf., Boulder / 2022</text>
-<circle cx="1033.7" cy="383.7" r="6" fill="var(--pine)" />
-<text x="1024.7" y="387.7" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="end">Melbourne, Australia</text>
-<text x="1024.7" y="400.7" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="end">Monash Symposium / Oct 2021</text>
-<g transform="translate(1044,34)"><path d="M0,-16 L6,10 L0,4 L-6,10 Z" fill="var(--ink)"/><text x="0" y="24" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="middle">N</text></g>
-</svg>
-    </div>
-    <div class="confmap-legend">
-      <span><i class="leg-swatch home"></i>Home institution</span>
-      <span><i class="leg-swatch presented"></i>Presented</span>
-      <span><i class="leg-swatch attended"></i>Attended</span>
-      <span><i class="leg-swatch invited"></i>Invited lecture</span>
-      <span><i class="leg-swatch forthcoming"></i>Forthcoming</span>
-    </div>
-  </section>
-
+  <div class="page-panel" data-page="bhupath" hidden>
   <section class="project" id="bhupath">
     <div class="project-head">
       <h2>BhuPath</h2>
@@ -884,13 +1040,13 @@
     <div class="chips" style="margin-top:16px;">
       <span class="chip">React &middot; single-file app</span>
       <span class="chip">Built with Claude</span>
-      <span class="chip">Zero-backend directory</span>
+      <span class="chip">Zero-backend</span>
       <span class="chip">AI-assisted verification tools</span>
     </div>
     <div class="project-grid">
       <div>
-        <p>BhuPath takes its name from the Sanskrit <i>bhu</i> (earth) and <i>path</i> (path, way): a free directory of the academic infrastructure that is often invisible or hard to reach for early-career and Global South researchers, particularly geographers, among them learned societies, conferences, journals, grants and funding, and tools for checking whether an unfamiliar venue is legitimate.</p>
-        <p>Lavanya is its sole author and developer, directing every piece of content herself and building the application as a single-file React app, with Claude as her only development tool. The app pairs a zero-backend public directory (societies, grants, conferences, field notes) with a small set of AI-assisted features for weighing opportunities and checking legitimacy, held to one rule from the first entry onward: nothing is invented, and no listing is added without a live link check.</p>
+        <p>BhuPath takes its name from the Sanskrit <i>bhu</i> (earth) and <i>path</i> (path, way). Academic infrastructure, the societies, conferences, journals, and funding that make a research career possible, isn&rsquo;t equally visible to everyone. Early-career and Global South researchers are often locked out simply because they don&rsquo;t know where to look, or can&rsquo;t tell a legitimate opportunity from a dead or predatory one.</p>
+        <p>BhuPath is a free guide to the infrastructure that&rsquo;s usually invisible from outside institutional networks, with tools to check whether an unfamiliar venue is worth a researcher&rsquo;s time before they commit to it. Nothing on it is invented, and no listing goes up without a live link check.</p>
         <p>Currently in development and testing ahead of a wider public release.</p>
       </div>
       <div class="facts project-facts">
@@ -906,7 +1062,9 @@
       </div>
     </div>
   </section>
+  </div>
 
+  <div class="page-panel" data-page="maps" hidden>
   <section class="gallery" id="maps">
     <div class="gallery-head">
       <h2>Mapping &amp; cartographic work</h2>
@@ -1000,6 +1158,7 @@
 
     </div>
   </section>
+  </div>
 
   <footer>
     <span class="mono">Lavanya Gupta &middot; Rural Development, TISS Tuljapur &middot; Regional Studies Association</span>
@@ -1028,6 +1187,23 @@
   });
   document.querySelectorAll('[data-target-tab]').forEach(function(a){
     a.addEventListener('click', function(){ activate(a.getAttribute('data-target-tab')); });
+  });
+})();
+
+(function(){
+  var pageButtons = document.querySelectorAll('.page-btn');
+  var pagePanels = document.querySelectorAll('.page-panel');
+  function activatePage(name){
+    pagePanels.forEach(function(p){
+      p.hidden = p.getAttribute('data-page') !== name;
+    });
+    pageButtons.forEach(function(b){
+      b.classList.toggle('current', b.getAttribute('data-page') === name);
+    });
+    window.scrollTo(0, 0);
+  }
+  pageButtons.forEach(function(b){
+    b.addEventListener('click', function(){ activatePage(b.getAttribute('data-page')); });
   });
 })();
 </script>
