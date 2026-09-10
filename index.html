@@ -231,6 +231,24 @@
   .leg-swatch.forthcoming{background:var(--paper-raised); border:1.6px dashed var(--ochre-fill);}
   .leg-swatch.home{background:var(--ochre-fill); clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
 
+  .footprint-table{width:100%; border-collapse:collapse; margin-top:28px; font-size:.92rem;}
+  .footprint-table th{
+    text-align:left; font-family:"IBM Plex Mono", monospace; font-size:10.5px; letter-spacing:.05em;
+    text-transform:uppercase; color:var(--ink-soft); font-weight:500;
+    padding:0 16px 10px 0; border-bottom:1px solid var(--line);
+  }
+  .footprint-table td{
+    padding:12px 16px 12px 0; border-bottom:1px solid var(--line);
+    color:var(--ink); vertical-align:top; line-height:1.45;
+  }
+  .footprint-table tr:last-child td{border-bottom:none;}
+  .footprint-table .ft-venue{display:block; color:var(--ink-soft); font-size:.85rem; margin-top:2px;}
+  .footprint-table .ft-role{
+    font-family:"IBM Plex Mono", monospace; font-size:10.5px; letter-spacing:.03em;
+    text-transform:uppercase; color:var(--ink-soft); white-space:nowrap;
+  }
+  .footprint-table .ft-role.forthcoming{color:var(--ochre-text);}
+
   /* ---------- cv & editorial tabs ---------- */
   .tabs-wrap{padding-top:56px; border-top:1px solid var(--line);}
   .tab-buttons{display:flex; gap:0; margin-bottom:8px;}
@@ -391,7 +409,7 @@
       <span class="bio-label">About</span>
       <p>Lavanya's doctoral research examines cultural entrepreneurship and rural regeneration in Munsiyari, a high-altitude town in Uttarakhand's Pithoragarh district on the India&ndash;China border. Her thesis, submitted for evaluation in 2026, draws on geographic and archival methods, combining GIS with historical census records and internet archives to work through questions of cultural landscape and rural definition in the Indian Himalayan context.</p>
       <p>She holds a BA and MA in Geography from the University of Lucknow and an M.Phil from TISS Mumbai. Her undergraduate degree paired Geography with Ancient History, an early combination that still shapes her interest in deep-time cultural landscapes. She also designed and taught a QGIS course at the graduate level at TISS.</p>
-      <p>Beyond the thesis, her cartographic work spans policy-facing thematic mapping, historical spatial narrative, and network analysis, produced for research, publication, and teaching. She serves as Blog Editor and a Co-opted Board Member of the Regional Studies Association, is the founding convener of S2S Dialogues, an RSA India Scholar-to-Scholar peer exchange programme launching in 2026, and is confirmed eligible for the RSA Fellowship Research Grant Scheme (FeRSA).</p>
+      <p>Beyond the thesis, her cartographic work spans policy-facing thematic mapping, historical spatial narrative, and network analysis, produced for research, publication, and teaching. She serves as Blog Editor and a Co-opted Board Member of the Regional Studies Association, volunteers in building out RSA India's network and activities, and is confirmed eligible for the RSA Fellowship Research Grant Scheme (FeRSA).</p>
     </div>
     <div class="facts">
       <div class="facts-block">
@@ -408,7 +426,7 @@
         <ul class="roles">
           <li>Fellow, Regional Studies Association (2026)</li>
           <li>Blog Editor &amp; Co-opted Board Member, RSA</li>
-          <li>Founding Convener, S2S Dialogues (RSA India)</li>
+          <li>Volunteer, RSA India Network &amp; Activities</li>
           <li>Eligible, FeRSA Research Grant Scheme</li>
         </ul>
       </div>
@@ -656,7 +674,7 @@
         <h3>Invited lectures</h3>
         <ul class="cv-simple-list">
           <li><span class="yr">2025</span>Writing an Academic Blog: Avenue for Easy, Accessible and Diverse Knowledge Sharing &middot; RSA Webinar</li>
-          <li><span class="yr">2025</span>From Blogs to Papers: Ethical and Engaged Writing &middot; Manipal University</li>
+          <li><span class="yr">2025</span>From Blogs to Papers: Ethical and Engaged Writing &middot; Manipal University Jaipur</li>
         </ul>
         <div class="cv-note">Hybrid conferences attended: Fourth Spatial Data Science Symposium, UC Santa Barbara (online), Sept 2023 &middot; Practicing Historical Geography, 29th HGRG Annual Conference, University of Nottingham (hybrid), Nov 2023.</div>
       </div>
@@ -718,7 +736,61 @@
     <div class="confmap-head">
       <h2>Conference footprint</h2>
     </div>
-    <p class="confmap-intro">Presentation, invited-lecture and attendance venues relative to her home institution, TISS Tuljapur. National seminars without a confirmed city are listed under Conference Presentations above rather than plotted here; positions are indicative, not surveyed to scale.</p>
+    <p class="confmap-intro">Conferences, invited lectures and presentations that have taken her research and cartography from TISS Tuljapur onto international platforms. Talks without a confirmed venue city are listed under Conference Presentations; marker positions on the map below are approximate, drawn from her travel record rather than a survey.</p>
+
+    <table class="footprint-table">
+      <thead>
+        <tr><th>Year</th><th>Event &amp; venue</th><th>Role</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2026</td>
+          <td>NMS 2026, &ldquo;(De)Coding Memory, Canon, and Heritage&rdquo;<span class="ft-venue">IIT Madras, Chennai, India</span></td>
+          <td><span class="ft-role forthcoming">Forthcoming</span></td>
+        </tr>
+        <tr>
+          <td>2025</td>
+          <td>From Blogs to Papers: Ethical and Engaged Writing<span class="ft-venue">Manipal University Jaipur, India</span></td>
+          <td><span class="ft-role">Invited lecture</span></td>
+        </tr>
+        <tr>
+          <td>2025</td>
+          <td>EdgeNet Workshop and Field Discussions<span class="ft-venue">Umea University, Sweden</span></td>
+          <td><span class="ft-role">Presented</span></td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td>International Geographical Congress<span class="ft-venue">Dublin, Ireland</span></td>
+          <td><span class="ft-role">Presented</span></td>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td>29th HGRG Annual Conference<span class="ft-venue">University of Nottingham, UK (hybrid)</span></td>
+          <td><span class="ft-role">Attended</span></td>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td>Fourth Spatial Data Science Symposium<span class="ft-venue">UC Santa Barbara, USA (online)</span></td>
+          <td><span class="ft-role">Attended</span></td>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td>AAG Annual Meeting<span class="ft-venue">Denver, USA</span></td>
+          <td><span class="ft-role">Presented</span></td>
+        </tr>
+        <tr>
+          <td>2022</td>
+          <td>Feminist Geography Conference, &ldquo;Pushing Boundaries&rdquo;<span class="ft-venue">University of Colorado Boulder, USA</span></td>
+          <td><span class="ft-role">Presented</span></td>
+        </tr>
+        <tr>
+          <td>2021</td>
+          <td>Monash Symposium<span class="ft-venue">Melbourne, Australia</span></td>
+          <td><span class="ft-role">Presented</span></td>
+        </tr>
+      </tbody>
+    </table>
+
     <div class="confmap-fig">
 <svg viewBox="0 0 1074 460" role="img" aria-labelledby="confmap-title" xmlns="http://www.w3.org/2000/svg">
 <title id="confmap-title">Map of conference, presentation and lecture venues relative to TISS Tuljapur</title>
@@ -755,7 +827,7 @@
 <text x="40.0" y="160.3" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="end">30&deg;N</text>
 <text x="40.0" y="60.3" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" text-anchor="end">60&deg;N</text>
 <path d="M 803.7 197.3 Q 810.5 202.7 817.3 214.0" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
-<path d="M 803.7 197.3 Q 801.5 203.6 799.3 212.8" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
+<path d="M 803.7 197.3 Q 806.0 182.0 802.6 167.6" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
 <path d="M 803.7 197.3 Q 710.7 83.9 617.7 44.7" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
 <path d="M 803.7 197.3 Q 666.4 88.8 529.1 79.5" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
 <path d="M 803.7 197.3 Q 674.9 92.3 546.2 80.8" fill="none" stroke="var(--pine-soft)" stroke-width="1" opacity="0.4"/>
@@ -769,9 +841,10 @@
 <text x="830.3" y="232.0" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="start">Chennai, India</text>
 <text x="830.3" y="245.0" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">IIT Madras / NMS 2026</text>
 <text x="830.3" y="258.0" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">Oct 2026 (forthcoming)</text>
-<polygon points="799.3,206.8 805.3,212.8 799.3,218.8 793.3,212.8" fill="var(--ochre-fill)" />
-<text x="786.3" y="239.8" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="end">Manipal, India</text>
-<text x="786.3" y="252.8" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="end">Invited lecture / 2025</text>
+<polygon points="802.6,161.6 808.6,167.6 802.6,173.6 796.6,167.6" fill="var(--ochre-fill)" />
+<text x="815.6" y="185.6" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="start">Jaipur, India</text>
+<text x="815.6" y="198.6" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">Manipal University Jaipur</text>
+<text x="815.6" y="211.6" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">Invited lecture / 2025</text>
 <circle cx="617.7" cy="44.7" r="6" fill="var(--pine)" />
 <text x="626.7" y="48.7" font-family="Source Sans 3" font-weight="600" font-size="12" fill="var(--ink)" text-anchor="start">Umea, Sweden</text>
 <text x="626.7" y="61.7" font-family="IBM Plex Mono, monospace" font-weight="400" font-size="10" fill="var(--ink-soft)" text-anchor="start">EdgeNet Workshop / Jun 2025</text>
